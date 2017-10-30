@@ -171,4 +171,9 @@ plt.show()
 
 ### Описание использумемых методов:
 
+* fit(X, y = None)
 
+Fit the model using X as training data
+Parameters:	
+X : {array-like, sparse matrix, BallTree, KDTree}
+Training data. If array or matrix, shape [n_samples, n_features], or [n_samples, n_samples] if metric = 'precomputed'.
