@@ -94,6 +94,7 @@ NearestNeighbors реализует метод обучения ближайши
 
 Использование по умолчанию NearestCentroid просто:
 
+```python
     >>> from sklearn.neighbors.nearest_centroid import NearestCentroid
     >>> import numpy as np
     >>> X = np.array([[-1, -1], [-2, -1], [-3, -2], [1, 1], [2, 1], [3, 2]])
@@ -102,7 +103,7 @@ NearestNeighbors реализует метод обучения ближайши
     >>> clf.fit(X, y)
     NearestCentroid(metric='euclidean', shrink_threshold=None)
     >>> print(clf.predict([[-0.8, -1]]))
-[1]
+```
 
 1.6.5.1. Ближайший деформированных центроид
 
