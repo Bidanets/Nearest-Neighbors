@@ -111,6 +111,7 @@ NearestNeighbors реализует метод обучения ближайши
 ![Описание изображения](https://github.com/Bidanets/Nearest-Neighbors/blob/master/pictures/sphx_glr_plot_nearest_centroid_002.png)
 
 
+
 ### 1.6.5.1. Ближайший деформированных центроид
 
 У классификатора NearestCentroid есть параметр shrink_threshold, который реализует классификатор ближайших деформированных центроидов. Фактически, значение каждой функции для каждого центроида делится на дисперсию внутри класса этой функции. Значения функций затем уменьшаются с помощью параметра shrink_threshold. Прежде всего, если конкретное значение функции пересекает ноль, оно устанавливается равным нулю. По сути, это устраняет эту функцию, влияя на классификацию. Это полезно, например, для удаления шумных функций.
@@ -142,7 +143,7 @@ cmap_bold = ListedColormap(['#FF0000', '#00FF00', '#0000FF'])
 
 for shrinkage in [None, .2]:
     # we create an instance of Neighbours Classifier and fit the data.
-    clf = NearestCentroid(shrink_threshold=shrinkage)
+    clf = NearestCentroid(shrink_threshold = shrinkage)
     clf.fit(X, y)
     y_pred = clf.predict(X)
     print(shrinkage, np.mean(y == y_pred))
@@ -150,24 +151,23 @@ for shrinkage in [None, .2]:
     # point in the mesh [x_min, x_max]x[y_min, y_max].
     x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
     y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
-    xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
-                         np.arange(y_min, y_max, h))
+    xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
     Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
 
     # Put the result into a color plot
     Z = Z.reshape(xx.shape)
     plt.figure()
-    plt.pcolormesh(xx, yy, Z, cmap=cmap_light)
+    plt.pcolormesh(xx, yy, Z, cmap = cmap_light)
 
     # Plot also the training points
-    plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap_bold,
-                edgecolor='b', s=20)
+    plt.scatter(X[:, 0], X[:, 1], c=y, cmap=cmap_bold, edgecolor='b', s=20)
     plt.title("3-Class classification (shrink_threshold=%r)"
               % shrinkage)
     plt.axis('tight')
 
 plt.show()
 ```
+
 
 ### Описание использумемых методов:
 
