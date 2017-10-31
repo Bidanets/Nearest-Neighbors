@@ -191,7 +191,7 @@ predict(X)[source]
 
 The predicted class C for each sample in X is returned.
 
-Аргументы:	X : массиво-подобные типы, форма = [n_samples, n_features]
+Аргументы: X : массиво-подобные типы, форма = [n_samples, n_features]
 
 Возвращаемый результат:	C : массв, форма = [n_samples]
 
