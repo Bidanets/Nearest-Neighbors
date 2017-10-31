@@ -185,7 +185,9 @@ y - ответы для объектов выборки
 
 ### Описание использумемых методов класса NearestCentroid:
 
-predict(X)[source]
+* Конструктор
+
+* predict(X)[source]
 
 Производит классификацию объектов тестовой выборки X и записывает ответы в массив.
 
@@ -199,4 +201,9 @@ The predicted class C for each sample in X is returned.
 
 Если параметр metric, который был передан в конструктор равен “precomputed”, то предполагается, что X является матрицей расстояний между данными, подлежащими прогнозированию.
 
+### Ссылки:
+
+http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html#sklearn.neighbors.NearestCentroid
+
+http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors
 
