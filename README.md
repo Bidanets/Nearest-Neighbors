@@ -103,7 +103,7 @@ NearestNeighbors реализует метод обучения ближайши
     >>> y = np.array([1, 1, 1, 2, 2, 2])
     >>> clf = NearestCentroid()
     >>> clf.fit(X, y)
-    NearestCentroid(metric='euclidean', shrink_threshold=None)
+    NearestCentroid(metric = 'euclidean', shrink_threshold = None)
     >>> print(clf.predict([[-0.8, -1]]))
 ```
 
@@ -169,11 +169,28 @@ plt.show()
 ```
 
 
-### Описание использумемых методов:
+### Описание использумемых методов класса NearestNeighbors:
 
 * fit(X, y = None)
 
-Fit the model using X as training data
-Parameters:	
-X : {array-like, sparse matrix, BallTree, KDTree}
-Training data. If array or matrix, shape [n_samples, n_features], or [n_samples, n_samples] if metric = 'precomputed'.
+Обучает модель используя X в качестве тренировочных данных
+Параметры:	
+X : {массив, разреженная матрица, дерево шаров, KD дерево}
+Тренировочные данные. Если массив или матрица, форма [n_samples, n_features], или [n_samples, n_samples] если аргумент metric = 'precomputed'.
+y - ответы для объектов выборки
+
+### Описание использумемых методов класса NearestCentroid:
+
+predict(X)[source]
+
+Производит классификацию объектов тестовой выборки X и записывает ответы в массив.
+
+The predicted class C for each sample in X is returned.
+Аргументы:	X : массиво-подобные типы, форма = [n_samples, n_features]
+Возвращаемый результат:	C : массв, форма = [n_samples]
+
+###### Обратите внимание
+
+Если параметр metric, который был передан в конструктор равен “precomputed”, то предполагается, что X является матрицей расстояний между данными, подлежащими прогнозированию.
+
+
