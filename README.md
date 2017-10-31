@@ -203,9 +203,13 @@ The predicted class C for each sample in X is returned.
 
 ### Ссылки:
 
-1. [Статья: KNN (классификация + регрессия) библиотеки scikitlearn с примерами кода] http://scikit-learn.org/stable/modules/neighbors.html#classification
+1. [Статья: KNN (классификация + регрессия) библиотеки scikitlearn с примерами кода] 
 
-2. [Документация по классу NearestCentroid] http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html#sklearn.neighbors.NearestCentroid
+http://scikit-learn.org/stable/modules/neighbors.html#classification
 
-3. [Документация по классу NearestNeighbors] http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors
+2. [Документация по классу NearestCentroid] 
+http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestCentroid.html#sklearn.neighbors.NearestCentroid
+
+3. [Документация по классу NearestNeighbors]
+http://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors
 
